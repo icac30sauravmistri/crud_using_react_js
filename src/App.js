@@ -11,10 +11,10 @@ const App = () => {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" exact element={<Main/>} />
-          <Route path="/admin/products" exact element={<Products/>} />
-          <Route path="/admin/products/create" exact element={<ProductCreate/>} />
-          <Route path="/admin/products/:id/edit" exact element={<ProductEdit/>} />
+          <Route path="/" exact element={<Main />} />
+          <Route path="/admin/products" exact element={<Products />} />
+          <Route path="/admin/products/create" exact element={<ProductCreate />} />
+          <Route path="/admin/products/:id/edit" exact element={<ProductEdit />} />
         </Routes>
       </Router>
     </div>

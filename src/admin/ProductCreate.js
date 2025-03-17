@@ -1,10 +1,11 @@
 import React from 'react'
+import Wrapper from './Wrapper'
 
 function ProductCreate() {
     return (
-        <div>
-            Create Product
-        </div>
+        <Wrapper>
+            Wrapper Create Product
+        </Wrapper>
     )
 }
 
