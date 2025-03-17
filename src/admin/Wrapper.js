@@ -4,13 +4,17 @@ import SideBar from './components/SideBar'
 
 function Wrapper(props) {
     return (
-        <div>
+        <>
             <Nav />
-            <div>
-                <SideBar />
-                {props.children}
+            <div className='wrraper'>
+                <div className='left-content'>
+                    <SideBar />
+                </div>
+                <div className='right-content'>
+                    {props.children}
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
