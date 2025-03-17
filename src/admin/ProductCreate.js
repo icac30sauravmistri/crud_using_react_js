@@ -14,8 +14,7 @@ function ProductCreate() {
             body: JSON.stringify({ title, image })
         })
             .then(res => res.json())
-            .then(() => history('/admin/products')
-            )
+            .then(() => history('/admin/products'))
     }
     return (
         <Wrapper>

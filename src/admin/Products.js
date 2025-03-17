@@ -40,7 +40,7 @@ function Products() {
                                     <img src={p.image} alt={p.title} width={90} />
                                 </td>
                                 <td>
-                                    <button type='submit' name='edit'>Edit</button>
+                                    <Link to={`/admin/products/${p.id}/edit`} className='btn'>Edit</Link>
                                     <button type='submit' name='delete' onClick={() => del(p.id)}>Delete</button>
                                 </td>
                             </tr>
