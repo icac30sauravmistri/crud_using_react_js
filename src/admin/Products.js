@@ -10,6 +10,13 @@ function Products() {
             .then(data => setProducts(data))
     }, [])
 
+    const del = (id) => {
+        fetch(`http://localhost:3004/products/${id}/`, {
+            method: 'DELETE'
+        })
+        setProducts(products.filter(p => p.id !== id))
+    }
+
     return (
         <Wrapper>
             <table>
@@ -32,7 +39,7 @@ function Products() {
                                 </td>
                                 <td>
                                     <button type='submit' name='edit'>Edit</button>
-                                    <button type='submit' name='delete'>Delete</button>
+                                    <button type='submit' name='delete' onClick={() => del(p.id)}>Delete</button>
                                 </td>
                             </tr>
                         )
