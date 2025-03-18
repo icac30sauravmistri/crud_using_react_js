@@ -1,19 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Wrapper from './Wrapper';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
 
-function ProductEdit(props) {
+function ProductEdit() {
+  const { id } = useParams();
   const [title, setTitle] = useState('');
   const [image, setImage] = useState('');
   const history = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:3004/products/${props.match.params.id}`)
+    fetch(`http://localhost:3004/products/`)
       .then(res => res.json())
       .then(product => {
-        setTitle(product.title);
-        setImage(product.image);
+        console.log(product);
+        console.log(product[id]);
+
+        setTitle(product[id].title);
+        setImage(product[id].image);
       })
+    //eslint-disable-next-line
   }, [])
 
   const submit = (e) => {
